@@ -1,31 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
+.nav {
+  height: auto;
+}
 
-//Colors
-$blue: #3792b8;
-$white: #fff;
-$black: #000;
-$grey: #787878;
-$darkGrey: #373737;
-
-//Fonts
-$one: 'Poiret One', cursive;
-.nav {height: auto;}
 body {
   margin: 0;
-  padding: 0; 
-  background-color: $grey;
+  padding: 0;
+  background-color: #787878;
 }
 
 .text {
   position: absolute;
   text-align: center;
-  font-family: $one;
-  color: $white;
+  font-family: "Poiret One", cursive;
+  color: #fff;
   width: 100%;
   top: 200px;
   text-transform: uppercase;
   font-size: 1.1em;
 }
+
 .toggle {
   display: none;
   width: 40px;
@@ -35,63 +29,95 @@ body {
   float: right;
   position: relative;
   z-index: 999;
-     &:hover {cursor: pointer;}
-    div {
-      border: solid 4px $white;
-      width: 100%;
-      margin-top: 5px;
-      background: $white;
-      float: left;
-      position: relative;
-      clear: both;
-      @include transition(all .5s);
-    }
 }
+.toggle:hover {
+  cursor: pointer;
+}
+.toggle div {
+  border: solid 4px #fff;
+  width: 100%;
+  margin-top: 5px;
+  background: #fff;
+  float: left;
+  position: relative;
+  clear: both;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 #barOne,
 #barTwo,
 #barThree {
-  @include transition(all .5s);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
   position: relative;
-  border: solid 4px $white;
-  right: 0; 
+  border: solid 4px #fff;
+  right: 0;
   left: 0;
   top: 0;
   bottom: 0;
 }
+
 .close {
-  color: $white;
-  font-family: $one;
+  color: #fff;
+  font-family: "Poiret One", cursive;
   text-transform: uppercase;
-  @include transition(all.5s);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
   position: absolute;
   top: 80px;
   opacity: 0;
   left: 0;
 }
+
 .closeUp {
   top: 36px;
   display: block;
   opacity: 1;
 }
+
 .left {
   border-radius: 6px;
-  @include transform( rotate(48deg) );
-  @include transition(all.5s);
-  border: solid 6px $white;
+  -webkit-transform: rotate(48deg);
+  -moz-transform: rotate(48deg);
+  -ms-transform: rotate(48deg);
+  -o-transform: rotate(48deg);
+  transform: rotate(48deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  border: solid 6px #fff;
   right: 20px !important;
 }
+
 .right {
   border-radius: 6px;
- @include transform( rotate(-2028deg) );
-  @include transition(all.5s);
+  -webkit-transform: rotate(-2028deg);
+  -moz-transform: rotate(-2028deg);
+  -ms-transform: rotate(-2028deg);
+  -o-transform: rotate(-2028deg);
+  transform: rotate(-2028deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
   left: 0px !important;
-  border: solid 6px $white;
+  border: solid 6px #fff;
   top: -12px !important;
 }
+
 .down {
   border-radius: 6px;
-   @include transform( rotate(-1080deg) );
-  @include transition(all.5s);
+  -webkit-transform: rotate(-1080deg);
+  -moz-transform: rotate(-1080deg);
+  -ms-transform: rotate(-1080deg);
+  -o-transform: rotate(-1080deg);
+  transform: rotate(-1080deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
   opacity: 0;
 }
 
@@ -100,95 +126,113 @@ body {
   position: absolute;
   height: auto;
   overflow: hidden;
-  background: $blue;
+  background: #3792b8;
   padding-top: 30px;
   -webkit-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0 5px 10px 0 rgba(50, 50, 50, 0.75);
-  box-shadow:         0 5px 10px 0 rgba(50, 50, 50, 0.75);
-    ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        li {
-          display: inline-block;
-            &:before {
-              content: " | ";
-              color: $white;
-              padding: 0 10px 0;
-              font-size: 1.6em;
-            }
-            &:first-child:before {
-              content: "";
-            }
-            a {
-              font-family: $one;
-              color: $white;
-              text-decoration: none;
-              text-transform: uppercase;
-              font-size: 1.6em;
-              border-bottom: solid 1px $white;
-              border-top: solid 1px $white;
-              padding: 40px 0 40px 0;
-               @include transition(all .4s ease);
-                &:hover {
-                  @include transition(all .4s ease);
-                  padding: auto;
-                  padding: 0;
-                }
-            }
-        }
-    }
+  -moz-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
+  box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
+}
+.bar ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.bar ul li {
+  display: inline-block;
+}
+.bar ul li:before {
+  content: " | ";
+  color: #fff;
+  padding: 0 10px 0;
+  font-size: 1.6em;
+}
+.bar ul li:first-child:before {
+  content: "";
+}
+.bar ul li a {
+  font-family: "Poiret One", cursive;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  border-bottom: solid 1px #fff;
+  border-top: solid 1px #fff;
+  padding: 40px 0 40px 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.bar ul li a:hover {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: auto;
+  padding: 0;
 }
 
-@media only screen and(max-width: 768px){
-  .toggle {display: block;}
-  .nav {height: 0;}
+@media only screen and (max-width: 768px) {
+  .toggle {
+    display: block;
+  }
+
+  .nav {
+    height: 0;
+  }
+
   .height {
     top: 89px !important;
     left: 0 !important;
     margin-top: 149px !important;
-    @include transition(all .5s);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
   }
-  .text { display: none;}
+
+  .text {
+    display: none;
+  }
+
   .bar {
     overflow: visible;
     padding-bottom: 20px;
-    ul {
-      text-align: left;
-      margin-bottom: 0;
-      margin-top: 0;
-      background: $darkGrey;
-      position: absolute;
-      width: 100%;
-      margin-top: 149px;
-      top: 89px;
-      height: auto;
-      margin-bottom:-110px;
-      padding: 20px 0 20px 0;
-      z-index: 5;
-      left:-1000px;
-      @include transition(all .5s);
-      li{
-        display: block;
-        margin: 10px 0;
-        padding: 10px;
-        &:before {
-          content: "";
-        }
-        &:hover {
-          background-color: $grey;
-        }
-          a {
-            border: none;
-          }
-      }
-    }
+  }
+  .bar ul {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    background: #373737;
+    position: absolute;
+    width: 100%;
+    margin-top: 149px;
+    top: 89px;
+    height: auto;
+    margin-bottom: -110px;
+    padding: 20px 0 20px 0;
+    z-index: 5;
+    left: -1000px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .bar ul li {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .bar ul li:before {
+    content: "";
+  }
+  .bar ul li:hover {
+    background-color: #787878;
+  }
+  .bar ul li a {
+    border: none;
   }
 }
