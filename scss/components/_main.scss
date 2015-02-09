@@ -5,7 +5,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $background;
+  //background-color: $background;
+    
+  background:url(../img/background.jpg) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 .text {
@@ -16,8 +23,11 @@ body {
   width: 100%;
   top: 200px;
   text-transform: uppercase;
+  font-size: 0.9em;
 }
 
+
+// toggle mixin with hover
 .toggle {
   display: none;
   width: 40px;
@@ -128,7 +138,7 @@ body {
        
           &:hover { 
               //padding: auto;
-              padding: .25em; //animate on hover with more padding
+              padding: .25em; //animate with larger padding
               @include header-nav-hover-state(); 
           }
         }
@@ -186,7 +196,7 @@ body {
         }
       &:hover {
         background-color: $background;
-        font-size: 1.1em; //animate on hover with larger font
+        font-size: 1.1em; //animate with larger font size
         }
       a {
         border: none;

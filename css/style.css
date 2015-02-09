@@ -52,9 +52,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FF7470; }
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  background-size: cover; }
 
-/* line 11, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 18, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .text {
   position: absolute;
   text-align: center;
@@ -62,9 +63,10 @@ body {
   color: #FEFFEF;
   width: 100%;
   top: 200px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 0.9em; }
 
-/* line 21, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 31, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .toggle {
   display: none;
   width: 40px;
@@ -74,11 +76,11 @@ body {
   float: right;
   position: relative;
   z-index: 999; }
-  /* line 31, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 41, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .toggle:hover {
     cursor: pointer; }
 
-/* line 35, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 45, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .toggle div {
   width: 100%;
   margin-top: 5px;
@@ -88,7 +90,7 @@ body {
   clear: both;
   transition: all 0.5s; }
 
-/* line 47, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 57, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 #barOne, #barTwo, #barThree {
   position: relative;
   border: solid 4px #FEFFEF;
@@ -98,7 +100,7 @@ body {
   bottom: 0;
   transition: all 0.5s; }
 
-/* line 58, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 68, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .left {
   border: solid 6px #FEFFEF;
   right: 20px !important;
@@ -107,7 +109,7 @@ body {
   transform: rotate(48deg);
   transition: all 0.5s; }
 
-/* line 66, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 76, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .right {
   left: 0px !important;
   border: solid 6px #FEFFEF;
@@ -117,7 +119,7 @@ body {
   transform: rotate(-2028deg);
   transition: all 0.5s; }
 
-/* line 75, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 85, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .down {
   opacity: 0;
   -webkit-transform: rotate(-1080deg);
@@ -125,7 +127,7 @@ body {
   transform: rotate(-1080deg);
   transition: all 0.5s; }
 
-/* line 83, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 93, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .bar {
   width: 100%;
   position: absolute;
@@ -134,7 +136,7 @@ body {
   background: #4ACEC5;
   padding-top: 30px;
   box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.25); }
-  /* line 94, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 104, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar ul {
     list-style: none;
     padding: 0;
@@ -144,19 +146,19 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
-    /* line 106, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+    /* line 116, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
     .bar ul li {
       display: inline-block; }
-      /* line 109, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 119, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li:before {
         content: " | ";
         color: #FEFFEF;
         padding: 0 10px 0;
         font-size: 1.6em; }
-      /* line 115, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 125, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li:first-child:before {
         content: ""; }
-      /* line 118, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 128, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li a {
         font-family: 'Raleway', sans-serif;
         color: #FEFFEF;
@@ -167,37 +169,37 @@ body {
         border-top: solid 1px #FEFFEF;
         padding: 40px 0 40px 0;
         transition: all 0.4s ease; }
-        /* line 129, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+        /* line 139, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
         .bar ul li a:hover {
           padding: 0.25em;
           transition: all 0.4s ease; }
 
 @media only screen and (max-width: 768px) {
-  /* line 140, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 150, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .toggle {
     display: block; }
 
-  /* line 144, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 154, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .nav {
     height: 0; }
 
-  /* line 148, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 158, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .height {
     top: 89px !important;
     left: 0 !important;
     margin-top: 149px !important;
     transition: all 0.5s; }
 
-  /* line 155, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 165, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .text {
     display: none; }
 
-  /* line 159, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 169, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar {
     overflow: visible;
     padding-bottom: 20px; }
 
-  /* line 163, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 173, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar ul {
     text-align: left;
     margin-bottom: 0;
@@ -213,19 +215,19 @@ body {
     z-index: 5;
     left: -1000px;
     transition: all 0.5s; }
-    /* line 179, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+    /* line 189, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
     .bar ul li {
       display: block;
       margin: 10px 0;
       padding: 10px; }
-      /* line 184, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 194, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li:before {
         content: ""; }
-      /* line 187, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 197, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li:hover {
         background-color: #FF7470;
         font-size: 1.1em; }
-      /* line 191, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 201, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li a {
         border: none; }
  }
