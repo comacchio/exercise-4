@@ -63,8 +63,8 @@ body {
   color: #FEFFEF;
   width: 100%;
   top: 200px;
-  text-transform: uppercase;
-  font-size: 0.9em; }
+  font-size: 1.5em;
+  line-height: 3em; }
 
 /* line 31, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .toggle {
@@ -192,14 +192,14 @@ body {
 
   /* line 165, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .text {
-    display: none; }
+    font-size: 1.2em; }
 
-  /* line 169, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 170, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar {
     overflow: visible;
     padding-bottom: 20px; }
 
-  /* line 173, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 174, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar ul {
     text-align: left;
     margin-bottom: 0;
@@ -215,19 +215,19 @@ body {
     z-index: 5;
     left: -1000px;
     transition: all 0.5s; }
-    /* line 189, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+    /* line 190, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
     .bar ul li {
       display: block;
       margin: 10px 0;
       padding: 10px; }
-      /* line 194, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 195, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li:before {
         content: ""; }
-      /* line 197, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 198, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li:hover {
         background-color: #FF7470;
         font-size: 1.1em; }
-      /* line 201, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+      /* line 202, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
       .bar ul li a {
         border: none; }
  }
