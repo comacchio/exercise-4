@@ -5,3 +5,4 @@ $( ".toggle" ).click(function() {
   $( '.close' ).toggleClass( "closeUp" );
   $( '.bar ul' ).toggleClass( "height" );
 });
+
