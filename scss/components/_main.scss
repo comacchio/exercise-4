@@ -1,0 +1,194 @@
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+//Colors
+$blue: #3792b8;
+$white: #fff;
+$black: #000;
+$grey: #787878;
+$darkGrey: #373737;
+
+//Fonts
+$one: 'Poiret One', cursive;
+.nav {height: auto;}
+body {
+  margin: 0;
+  padding: 0; 
+  background-color: $grey;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  font-family: $one;
+  color: $white;
+  width: 100%;
+  top: 200px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.toggle {
+  display: none;
+  width: 40px;
+  text-align: center;
+  height: auto;
+  right: 40px;
+  float: right;
+  position: relative;
+  z-index: 999;
+     &:hover {cursor: pointer;}
+    div {
+      border: solid 4px $white;
+      width: 100%;
+      margin-top: 5px;
+      background: $white;
+      float: left;
+      position: relative;
+      clear: both;
+      @include transition(all .5s);
+    }
+}
+#barOne,
+#barTwo,
+#barThree {
+  @include transition(all .5s);
+  position: relative;
+  border: solid 4px $white;
+  right: 0; 
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.close {
+  color: $white;
+  font-family: $one;
+  text-transform: uppercase;
+  @include transition(all.5s);
+  position: absolute;
+  top: 80px;
+  opacity: 0;
+  left: 0;
+}
+.closeUp {
+  top: 36px;
+  display: block;
+  opacity: 1;
+}
+.left {
+  border-radius: 6px;
+  @include transform( rotate(48deg) );
+  @include transition(all.5s);
+  border: solid 6px $white;
+  right: 20px !important;
+}
+.right {
+  border-radius: 6px;
+ @include transform( rotate(-2028deg) );
+  @include transition(all.5s);
+  left: 0px !important;
+  border: solid 6px $white;
+  top: -12px !important;
+}
+.down {
+  border-radius: 6px;
+   @include transform( rotate(-1080deg) );
+  @include transition(all.5s);
+  opacity: 0;
+}
+
+.bar {
+  width: 100%;
+  position: absolute;
+  height: auto;
+  overflow: hidden;
+  background: $blue;
+  padding-top: 30px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0 5px 10px 0 rgba(50, 50, 50, 0.75);
+  box-shadow:         0 5px 10px 0 rgba(50, 50, 50, 0.75);
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        li {
+          display: inline-block;
+            &:before {
+              content: " | ";
+              color: $white;
+              padding: 0 10px 0;
+              font-size: 1.6em;
+            }
+            &:first-child:before {
+              content: "";
+            }
+            a {
+              font-family: $one;
+              color: $white;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-size: 1.6em;
+              border-bottom: solid 1px $white;
+              border-top: solid 1px $white;
+              padding: 40px 0 40px 0;
+               @include transition(all .4s ease);
+                &:hover {
+                  @include transition(all .4s ease);
+                  padding: auto;
+                  padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 768px){
+  .toggle {display: block;}
+  .nav {height: 0;}
+  .height {
+    top: 89px !important;
+    left: 0 !important;
+    margin-top: 149px !important;
+    @include transition(all .5s);
+  }
+  .text { display: none;}
+  .bar {
+    overflow: visible;
+    padding-bottom: 20px;
+    ul {
+      text-align: left;
+      margin-bottom: 0;
+      margin-top: 0;
+      background: $darkGrey;
+      position: absolute;
+      width: 100%;
+      margin-top: 149px;
+      top: 89px;
+      height: auto;
+      margin-bottom:-110px;
+      padding: 20px 0 20px 0;
+      z-index: 5;
+      left:-1000px;
+      @include transition(all .5s);
+      li{
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        &:before {
+          content: "";
+        }
+        &:hover {
+          background-color: $grey;
+        }
+          a {
+            border: none;
+          }
+      }
+    }
+  }
+}
