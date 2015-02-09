@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Poiret+One);
 .nav {
   height: auto;
 }
@@ -6,20 +5,22 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #787878;
+  background-color: $background;
 }
 
 .text {
   position: absolute;
   text-align: center;
-  font-family: "Poiret One", cursive;
-  color: #fff;
+  font-family: $nav-font;
+  color: $white;
   width: 100%;
   top: 200px;
   text-transform: uppercase;
   font-size: 1.1em;
 }
 
+
+// toggle mixin with hover
 .toggle {
   display: none;
   width: 40px;
@@ -34,10 +35,10 @@ body {
   cursor: pointer;
 }
 .toggle div {
-  border: solid 4px #fff;
+  border: solid 4px $white;
   width: 100%;
   margin-top: 5px;
-  background: #fff;
+  background: $white;
   float: left;
   position: relative;
   clear: both;
@@ -45,7 +46,7 @@ body {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-
+//@include transition(all .5s);
 #barOne,
 #barTwo,
 #barThree {
@@ -53,16 +54,17 @@ body {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   position: relative;
-  border: solid 4px #fff;
+  border: solid 4px $white;
   right: 0;
   left: 0;
   top: 0;
   bottom: 0;
 }
 
+//@include transition(all .5s);
 .close {
-  color: #fff;
-  font-family: "Poiret One", cursive;
+  color: $white;
+  font-family: $nav-font;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -79,6 +81,8 @@ body {
   opacity: 1;
 }
 
+//@include transition(all .5s);
+//@inlcude transform(rotate (-2028deg));
 .left {
   border-radius: 6px;
   -webkit-transform: rotate(48deg);
@@ -89,10 +93,12 @@ body {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  border: solid 6px #fff;
+  border: solid 6px $white;
   right: 20px !important;
 }
 
+//@include transition(all .5s);
+//@inlcude transform(rotate (-2028deg));
 .right {
   border-radius: 6px;
   -webkit-transform: rotate(-2028deg);
@@ -104,10 +110,12 @@ body {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   left: 0px !important;
-  border: solid 6px #fff;
+  border: solid 6px $white;
   top: -12px !important;
 }
 
+//@include transition(all .5s);
+//@inlcude transform(rotate (-1080deg));
 .down {
   border-radius: 6px;
   -webkit-transform: rotate(-1080deg);
@@ -121,63 +129,68 @@ body {
   opacity: 0;
 }
 
+//@include shadow(0 5px 10px 0 rgba(50, 50, 50, 0.25));
 .bar {
   width: 100%;
   position: absolute;
   height: auto;
   overflow: hidden;
-  background: #3792b8;
+  background: $header-color;  
   padding-top: 30px;
-  -webkit-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
-  box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.75);
-}
-.bar ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.bar ul li {
-  display: inline-block;
-}
-.bar ul li:before {
-  content: " | ";
-  color: #fff;
-  padding: 0 10px 0;
-  font-size: 1.6em;
-}
-.bar ul li:first-child:before {
-  content: "";
-}
-.bar ul li a {
-  font-family: "Poiret One", cursive;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.6em;
-  border-bottom: solid 1px #fff;
-  border-top: solid 1px #fff;
-  padding: 40px 0 40px 0;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.bar ul li a:hover {
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  padding: auto;
-  padding: 0;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.25);
+  -moz-box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.25);
+  box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.25);
+
+ ul {
+   list-style: none;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+    li {
+        display: inline-block;
+
+        &:before {
+          content: " | ";
+          color: $white;
+          padding: 0 10px 0;
+          font-size: 1.6em;
+        }
+        &:first-child:before {
+            content: "";
+        }
+        a { // @include transitions (all 0.4s ease);
+          font-family: $nav-font;
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 1.6em;
+          border-bottom: solid 1px $white;
+          border-top: solid 1px $white;
+          padding: 40px 0 40px 0;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+       
+          &:hover { //@include transition (all 0.4s ease);
+              -webkit-transition: all 0.4s ease;
+              -moz-transition: all 0.4s ease;
+              transition: all 0.4s ease;
+              padding: auto;
+              padding: 0;
+          }
+        }
+     }
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) { 
   .toggle {
     display: block;
   }
@@ -186,7 +199,7 @@ body {
     height: 0;
   }
 
-  .height {
+  .height { //@include transition(all 0.5s);
     top: 89px !important;
     left: 0 !important;
     margin-top: 149px !important;
@@ -203,11 +216,11 @@ body {
     overflow: visible;
     padding-bottom: 20px;
   }
-  .bar ul {
+  .bar ul { //@include transition(all 0.5s);
     text-align: left;
     margin-bottom: 0;
     margin-top: 0;
-    background: #373737;
+    background: $drop-down-color;
     position: absolute;
     width: 100%;
     margin-top: 149px;
@@ -220,19 +233,22 @@ body {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
-  }
-  .bar ul li {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-  }
-  .bar ul li:before {
-    content: "";
-  }
-  .bar ul li:hover {
-    background-color: #787878;
-  }
-  .bar ul li a {
-    border: none;
-  }
+  
+    li {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+  
+      &:before {
+        content: "";
+        }
+      &:hover {
+        background-color: $background;
+        }
+      a {
+        border: none;
+      }
+        
+     }
+   }
 }
