@@ -1,0 +1,81 @@
+/*@mixin ease($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}*/
+
+//small screens
+//toggle bars transition to x icon
+@mixin toggle-btn-transition(){
+ -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+//toggle bar rotation to x icon 
+@mixin rotate($rotate-deg){
+-webkit-transform: rotate($rotate-deg);
+  -moz-transform: rotate($rotate-deg);
+  -ms-transform: rotate($rotate-deg);
+  -o-transform: rotate($rotate-deg);
+  transform: rotate($rotate-deg);
+}
+
+
+//@mixin shadow();
+//large screens
+//easing on expanded nav hover state
+@mixin header-nav-hover-state(){
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+
+
+//landing page 
+/*@mixin img{
+    
+    .img-greetings{
+        max-width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto;
+        display: block;
+    }
+    .img-hover{
+        display: none;
+    }
+    &:hover{
+        .img-greetings{
+            display: none;
+        }
+
+        .img-hover{
+            max-width: 100%;
+            text-align: center;
+            vertical-align: bottom;
+            margin: auto;
+            display: block;
+        }
+    }
+}
+*/
+
+
+//on the navigation
+/*@mixin home($grn-white, $home){
+    a{
+        color: $grn-white;
+    }
+    background-color: $home;
+    &:hover{
+        a{
+            color: $home;
+        }
+        background-color: $grn-white;
+    }
+} */

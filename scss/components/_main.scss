@@ -42,17 +42,22 @@ body {
   float: left;
   position: relative;
   clear: both;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  
+  //-webkit-transition: all 0.5s;
+  //-moz-transition: all 0.5s;
+  //transition: all 0.5s;
+  @include toggle-btn-transition();
 }
+
 //@include transition(all .5s);
 #barOne,
 #barTwo,
 #barThree {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  //-webkit-transition: all 0.5s;
+  //-moz-transition: all 0.5s;
+  //transition: all 0.5s;
+  @include toggle-btn-transition();
+    
   position: relative;
   border: solid 4px $white;
   right: 0;
@@ -61,38 +66,23 @@ body {
   bottom: 0;
 }
 
-//@include transition(all .5s);
-.close {
-  color: $white;
-  font-family: $nav-font;
-  text-transform: uppercase;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-  position: absolute;
-  top: 80px;
-  opacity: 0;
-  left: 0;
-}
-
-.closeUp {
-  top: 36px;
-  display: block;
-  opacity: 1;
-}
 
 //@include transition(all .5s);
-//@inlcude transform(rotate (-2028deg));
+//@inlcude transform(rotate (48deg));
 .left {
   border-radius: 6px;
-  -webkit-transform: rotate(48deg);
-  -moz-transform: rotate(48deg);
-  -ms-transform: rotate(48deg);
-  -o-transform: rotate(48deg);
-  transform: rotate(48deg);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  //-webkit-transform: rotate(48deg);
+  //-moz-transform: rotate(48deg);
+  //-ms-transform: rotate(48deg);
+  //-o-transform: rotate(48deg);
+  //transform: rotate(48deg);
+  @include rotate(48deg);
+      
+  //-webkit-transition: all 0.5s;
+  //-moz-transition: all 0.5s;
+  //transition: all 0.5s;
+  @include toggle-btn-transition();
+    
   border: solid 6px $white;
   right: 20px !important;
 }
@@ -101,14 +91,18 @@ body {
 //@inlcude transform(rotate (-2028deg));
 .right {
   border-radius: 6px;
-  -webkit-transform: rotate(-2028deg);
-  -moz-transform: rotate(-2028deg);
-  -ms-transform: rotate(-2028deg);
-  -o-transform: rotate(-2028deg);
-  transform: rotate(-2028deg);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  //-webkit-transform: rotate(-2028deg);
+  //-moz-transform: rotate(-2028deg);
+  //-ms-transform: rotate(-2028deg);
+  //-o-transform: rotate(-2028deg);
+  //transform: rotate(-2028deg);
+  @include rotate(-2028deg);
+    
+ // -webkit-transition: all 0.5s;
+ // -moz-transition: all 0.5s;
+ // transition: all 0.5s;
+  @include toggle-btn-transition();
+    
   left: 0px !important;
   border: solid 6px $white;
   top: -12px !important;
@@ -118,17 +112,23 @@ body {
 //@inlcude transform(rotate (-1080deg));
 .down {
   border-radius: 6px;
-  -webkit-transform: rotate(-1080deg);
-  -moz-transform: rotate(-1080deg);
-  -ms-transform: rotate(-1080deg);
-  -o-transform: rotate(-1080deg);
-  transform: rotate(-1080deg);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  //-webkit-transform: rotate(-1080deg);
+  //-moz-transform: rotate(-1080deg);
+  //-ms-transform: rotate(-1080deg);
+  //-o-transform: rotate(-1080deg);
+  //transform: rotate(-1080deg);
+  @include rotate(-1080deg);
+    
+  //-webkit-transition: all 0.5s;
+  //-moz-transition: all 0.5s;
+  //transition: all 0.5s;
+  @include toggle-btn-transition();
+    
   opacity: 0;
 }
 
+
+//expanded nav for large screen
 //@include shadow(0 5px 10px 0 rgba(50, 50, 50, 0.25));
 .bar {
   width: 100%;
@@ -165,7 +165,7 @@ body {
         &:first-child:before {
             content: "";
         }
-        a { // @include transitions (all 0.4s ease);
+        a {  
           font-family: $nav-font;
           color: $white;
           text-decoration: none;
@@ -174,14 +174,10 @@ body {
           border-bottom: solid 1px $white;
           border-top: solid 1px $white;
           padding: 40px 0 40px 0;
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          transition: all 0.4s ease;
+          @include header-nav-hover-state();
        
-          &:hover { //@include transition (all 0.4s ease);
-              -webkit-transition: all 0.4s ease;
-              -moz-transition: all 0.4s ease;
-              transition: all 0.4s ease;
+          &:hover { 
+              @include header-nav-hover-state(); 
               padding: auto;
               padding: 0;
           }
@@ -203,9 +199,11 @@ body {
     top: 89px !important;
     left: 0 !important;
     margin-top: 149px !important;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+    
+    //-webkit-transition: all 0.5s;
+    //-moz-transition: all 0.5s;
+    //transition: all 0.5s;
+    @include toggle-btn-transition();
   }
 
   .text {
@@ -230,10 +228,12 @@ body {
     padding: 20px 0 20px 0;
     z-index: 5;
     left: -1000px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-  
+    
+    //-webkit-transition: all 0.5s;
+    //-moz-transition: all 0.5s;
+    //transition: all 0.5s;
+    @include toggle-btn-transition();
+      
     li {
       display: block;
       margin: 10px 0;

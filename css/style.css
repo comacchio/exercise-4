@@ -1,3 +1,49 @@
+/*@mixin ease($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}*/
+/*@mixin img{
+    
+    .img-greetings{
+        max-width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto;
+        display: block;
+    }
+    .img-hover{
+        display: none;
+    }
+    &:hover{
+        .img-greetings{
+            display: none;
+        }
+
+        .img-hover{
+            max-width: 100%;
+            text-align: center;
+            vertical-align: bottom;
+            margin: auto;
+            display: block;
+        }
+    }
+}
+*/
+/*@mixin home($grn-white, $home){
+    a{
+        color: $grn-white;
+    }
+    background-color: $home;
+    &:hover{
+        a{
+            color: $home;
+        }
+        background-color: $grn-white;
+    }
+} */
 /* line 1, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .nav {
   height: auto; }
@@ -45,7 +91,7 @@ body {
   clear: both;
   transition: all 0.5s; }
 
-/* line 52, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 55, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 #barOne, #barTwo, #barThree {
   transition: all 0.5s;
   position: relative;
@@ -55,24 +101,7 @@ body {
   top: 0;
   bottom: 0; }
 
-/* line 65, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
-.close {
-  color: #FEFFEF;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  transition: all 0.5s;
-  position: absolute;
-  top: 80px;
-  opacity: 0;
-  left: 0; }
-
-/* line 78, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
-.closeUp {
-  top: 36px;
-  display: block;
-  opacity: 1; }
-
-/* line 86, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 72, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .left {
   border-radius: 6px;
   -webkit-transform: rotate(48deg);
@@ -82,7 +111,7 @@ body {
   border: solid 6px #FEFFEF;
   right: 20px !important; }
 
-/* line 102, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 92, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .right {
   border-radius: 6px;
   -webkit-transform: rotate(-2028deg);
@@ -93,7 +122,7 @@ body {
   border: solid 6px #FEFFEF;
   top: -12px !important; }
 
-/* line 119, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+/* line 113, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
 .down {
   border-radius: 6px;
   -webkit-transform: rotate(-1080deg);
@@ -144,38 +173,38 @@ body {
         border-top: solid 1px #FEFFEF;
         padding: 40px 0 40px 0;
         transition: all 0.4s ease; }
-        /* line 181, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+        /* line 179, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
         .bar ul li a:hover {
           transition: all 0.4s ease;
           padding: auto;
           padding: 0; }
 
 @media only screen and (max-width: 768px) {
-  /* line 194, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 190, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .toggle {
     display: block; }
 
-  /* line 198, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 194, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .nav {
     height: 0; }
 
-  /* line 202, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 198, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .height {
     top: 89px !important;
     left: 0 !important;
     margin-top: 149px !important;
     transition: all 0.5s; }
 
-  /* line 211, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 209, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .text {
     display: none; }
 
-  /* line 215, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 213, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar {
     overflow: visible;
     padding-bottom: 20px; }
 
-  /* line 219, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
+  /* line 217, /Users/Jennifer/Documents/GD_Semester_6/web dev/exercise-4/scss/components/main */
   .bar ul {
     text-align: left;
     margin-bottom: 0;
